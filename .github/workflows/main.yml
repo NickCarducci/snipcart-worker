@@ -25,7 +25,7 @@ jobs:
           # https://github.com/NickCarducci/bear/blob/maintenance/.github/workflows/main.yml
           #-apiKey: ${{ secrets.CF_API_KEY }}
           #authorization: ${{ secrets.AUTHORIZATION }}
-          #apiToken: ${{ secrets.CF_API_TOKEN }} # https://superuser.com/questions/1575061/how-do-i-download-and-extract-a-tar-in-one-command-while-extracting-only-a-sing
+          apiToken: ${{ secrets.CF_API_TOKEN }} # https://superuser.com/questions/1575061/how-do-i-download-and-extract-a-tar-in-one-command-while-extracting-only-a-sing
           #preCommands: curl https://sh.rustup.rs -sSf | sh -s -- -y && PATH="$PATH:$HOME/.cargo/bin" && cargo install --git https://github.com/cloudflare/workers-rs && PATH="$PATH:$HOME/.cache/.wasm-pack/.wasm-bindgen-cargo-install-0.2.81/bin" && curl -L 'https://github.com/WebAssembly/binaryen/releases/download/version_90/binaryen-version_90-x86-linux.tar.gz' | tar  -xz # && PATH="$PATH:$HOME/.cargo/bin" # CF_CF_API_KEY: ${{ secrets.CF_API_KEY }} wrangler 
           #preCommands: curl https://sh.rustup.rs -sSf | sh -s -- -y && PATH="$PATH:$HOME/.cargo/bin" && cargo install --git https://github.com/cloudflare/workers-rs
           #CF_CF_API_KEY: ${{ secrets.CF_API_KEY }} wrangler dev && cargo install --git https://github.com/cloudflare/workers-rs --branch zeb/esbuild
@@ -37,6 +37,6 @@ jobs:
           #wranglerVersion: '2.0.24'
         env:
           USER: root
-          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          #CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           #CF_ZONE_ID: "6202e995eadc857cd8e97e8ba608286d"
           CF_ACCOUNT_ID: "9ddca7c9df604668fc6d14f079b2f066"
