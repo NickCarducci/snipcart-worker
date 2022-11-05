@@ -1,0 +1,14 @@
+compatibility_date = "2022-07-22"
+name = "node-dev"
+account_id = "9ddca7c9df604668fc6d14f079b2f066" 
+# node_compat = true
+main = "src/index.mjs"
+exclude = ["node_modules"]
+workers_dev = true # or route custom domain-zone
+
+[env.production]
+kv_namespaces = [
+  {binding="backbank",id="c66ecb618968496e94366f8c6616305d"}
+]
+name = "node"
+# route = { pattern = "https://_.com/api*", zone_id = "6202e995eadc857cd8e97e8ba608286d" }

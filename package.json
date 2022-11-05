@@ -1,0 +1,19 @@
+{
+    "private": true,
+    "name": "snipcart-worker",
+    "version": "1.0.0",
+    "description": "bearer collection for NickCarducci snipcart gateways",
+    "main": "index.js",
+    "scripts": {
+      "build": "",
+      "build1": "rollup -c"
+    },
+    "author": "Nick Carducci nmcarducci@gmail.com",
+    "license": "",
+    "false": {
+      "firebase": "^9.10.0",
+      "@rollup/plugin-commonjs": "^17.0.0",
+      "@rollup/plugin-node-resolve": "^11.1.0",
+      "rollup": "^2.36.1"
+    }
+  }
