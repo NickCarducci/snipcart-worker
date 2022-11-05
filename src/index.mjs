@@ -57,7 +57,7 @@ async function noException(req, env) {
 
   return new Response(`{data:${snipcartkey}}`, {
       status: 200,
-      message: UseDependency(),
+      message: "success",
       headers: { ...dataHead }
   });
 }
