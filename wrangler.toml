@@ -1,5 +1,5 @@
 compatibility_date = "2022-07-22"
-name = "node-dev"
+name = "snipcart" # ._.workers.dev
 account_id = "9ddca7c9df604668fc6d14f079b2f066" 
 # node_compat = true
 main = "src/index.mjs"
