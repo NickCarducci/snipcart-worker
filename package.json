@@ -16,4 +16,4 @@
       "@rollup/plugin-node-resolve": "^11.1.0",
       "rollup": "^2.36.1"
     }
-  }
+}
