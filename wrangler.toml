@@ -1,12 +1,13 @@
 compatibility_date = "2022-07-22"
-name = "snipcart" # ._.workers.dev
+name = "snipcart-dev" # ._.workers.dev
 account_id = "9ddca7c9df604668fc6d14f079b2f066" 
 # node_compat = true
 main = "src/index.mjs"
 # exclude = ["node_modules"]
 workers_dev = true # or route custom domain-zone
 
-# [env.production]
+[env.production]
+name = "snipcart"
 kv_namespaces = [
   {binding="snipcart",id="c66ecb618968496e94366f8c6616305d"}
 ]
