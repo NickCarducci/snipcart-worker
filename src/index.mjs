@@ -22,17 +22,17 @@ export default {
         ],
         "Access-Control-Allow-Methods": ["GET", "POST", "OPTIONS"]
       };
-      if (allowedOrigins.indexOf(origin) === -1)
-        return new Response(
-          `{error:${"no access for this origin- " + origin}}`,
-          {
-            status: 400,
-            message: "no access for this origin: " + origin
-            //headers: { "Content-Type": "application/json" }
-          }
-        );
 
       if (request.method === "OPTIONS") {
+        if (allowedOrigins.indexOf(origin) === -1)
+          return new Response(
+            `{error:${"no access for this origin- " + origin}}`,
+            {
+              status: 401,
+              message: "no access for this origin: " + origin
+              //headers: { "Content-Type": "application/json" }
+            }
+          );
         console.log("OPTIONS for " + origin);
         return new Response(`preflight response for POST`, {
           status: 200,
