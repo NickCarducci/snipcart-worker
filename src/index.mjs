@@ -51,12 +51,15 @@ const noaccess = (origin) =>
         }
     );
 async function noException(req, env) {
+    const urlObject = new URL(req.url); //.pathname;//path
+    var origin = urlObject.origin; // request.headers.get("Origin");
     // key => Object ID; return new Response(JSON.stringify(backbank));
     // boot instance, if necessary //https://<worker-name>.<your-namespace>.workers.dev/
     //https://linc.sh/blog/durable-objects-in-production
     //const clientId = request.headers.get("cf-connecting-ip");
 
     const /*href = urlObject.searchParams.get("name"), */dataHead = {
+        "Access-Control-Allow-Origin": origin,//new URL(req.url),//
         "Content-Type": "application/json"
     };
 
