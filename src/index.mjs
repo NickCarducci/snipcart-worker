@@ -9,7 +9,7 @@ export default {
                 "https://wavv.art"
             ];
 
-            const urlObject = new URL(req.url); //.pathname;//path
+            const urlObject = new URL(request.url); //.pathname;//path
             var origin = urlObject.origin; // request.headers.get("Origin");
             const headers = {
                 "Access-Control-Allow-Origin": origin,//new URL(req.url),//
