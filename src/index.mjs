@@ -23,7 +23,7 @@ export default {
                     //"X-Requested-With",
                     "Allow"
                 ],
-                "Access-Control-Allow-Methods": ["POST", "OPTIONS"]
+                "Access-Control-Allow-Methods": ["GET", "POST", "OPTIONS"]
             }
             if (allowedOrigins.indexOf(origin) === -1) return new Response(
                 `{error:${"no access for this origin- " + origin}}`,
