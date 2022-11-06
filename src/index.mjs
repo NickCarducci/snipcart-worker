@@ -11,17 +11,14 @@ export default {
 
             const urlObject = new URL(request.url); //.pathname;//path
             var origin = urlObject.origin; // request.headers.get("Origin");
-            const headers = {
+            const dataHead = {
                 "Access-Control-Allow-Origin": origin,//new URL(req.url),//
                 "Access-Control-Allow-Headers": [
-                    //"Access-Control-Allow-Origin",
+                    "Access-Control-Request-Headers",
                     //"Access-Control-Allow-Methods",
                     "Content-Type",
                     "Origin",
                     "Referer",
-                    "Accept",
-                    //"X-Requested-With",
-                    "Allow"
                 ],
                 "Access-Control-Allow-Methods": ["GET", "POST", "OPTIONS"]
             }
@@ -43,7 +40,10 @@ export default {
             return new Response(`{data:${snipcartkey}}`, {
                 status: 200,
                 message: "success",
-                headers: { ...dataHead }
+                headers: {
+                    ...dataHead,
+                    "Content-Type": "application/json"
+                }
             });
             // wrap the body of your callback in a try/catch block to ensure it cannot throw an exception.
             // is return, "the body?"
