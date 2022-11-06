@@ -1,5 +1,5 @@
 export default {
-    async fetch(request, env /*, ctx*/) {
+    fetch(request/*, env, ctx*/) {
         //Response class must be a promise
         try {
             var allowedOrigins = [
@@ -33,7 +33,7 @@ export default {
                         "Access-Control-Allow-Methods": ["POST", "OPTIONS"]
                     }
                 });
-            return await noException(request, env);
+            return noException(request);
             // wrap the body of your callback in a try/catch block to ensure it cannot throw an exception.
             // is return, "the body?"
         } catch (e) {
@@ -50,7 +50,7 @@ const noaccess = (origin) =>
             //headers: { "Content-Type": "application/json" }
         }
     );
-async function noException(req, env) {
+function noException(req) {
     const urlObject = new URL(req.url); //.pathname;//path
     var origin = urlObject.origin; // request.headers.get("Origin");
     // key => Object ID; return new Response(JSON.stringify(backbank));
