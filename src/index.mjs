@@ -31,12 +31,14 @@ export default {
                 }
             );
 
-            if (request.method === "OPTIONS")
+            if (request.method === "OPTIONS"){
+                console.log("OPTIONS for "+origin)
                 return new Response(`preflight response for POST`, {
                     status: 200,
                     message: `preflight response for POST`,
                     headers
-                });
+                });}
+                console.log("POSTing from "+origin)
             return new Response(`{data:${snipcartkey}}`, {
                 status: 200,
                 message: "success",
