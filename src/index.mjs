@@ -24,7 +24,8 @@ export default {
       };
 
       if (request.method === "OPTIONS") {
-        if (allowedOrigins.indexOf(origin) === -1)
+        if (allowedOrigins.indexOf(origin) === -1) {
+          console.log(origin + " not ", allowedOrigins);
           return new Response(
             `{error:${"no access for this origin- " + origin}}`,
             {
@@ -33,6 +34,7 @@ export default {
               //headers: { "Content-Type": "application/json" }
             }
           );
+        }
         console.log("OPTIONS for " + origin);
         return new Response(`preflight response for POST`, {
           status: 200,
