@@ -9,11 +9,13 @@ export default {
                   headers: {
                       "Access-Control-Allow-Headers": [
                           //"Access-Control-Allow-Origin",
-                          "Access-Control-Allow-Methods",
-                          "Content-Type"
-                          //"Origin",
+                          //"Access-Control-Allow-Methods",
+                          "Content-Type",
+                          "Origin",
+                          "Referer",
+                          "Accept",
                           //"X-Requested-With",
-                          //"Accept"
+                          "Allow"
                       ],
                       "Access-Control-Allow-Methods": ["POST", "OPTIONS"]
                   }
@@ -60,4 +62,4 @@ async function noException(req, env) {
       message: "success",
       headers: { ...dataHead }
   });
-}
+}//"measuring tallest, most [beautiful]"
